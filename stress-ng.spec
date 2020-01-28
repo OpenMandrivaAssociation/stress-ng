@@ -6,6 +6,7 @@ Summary:	Stress test a computer system in various ways
 License:	GPLv2+
 URL:		http://kernel.ubuntu.com/~cking/%{name}
 Source0:	http://kernel.ubuntu.com/~cking/tarballs/%{name}/%{name}-%{version}.tar.xz
+Patch0:		stress-ng-0.10.17-clang.patch
 
 BuildRequires:  gcc
 BuildRequires:	glibc-devel
@@ -25,11 +26,13 @@ various physical subsystems of a computer as well as the various operating
 system kernel interfaces.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 export CFLAGS="%{optflags}"
 export LDFLAGS="%{__global_ldflags}"
+# Allow for [[clang::fallthrough]]
+sed -i -e 's,gnu99,gnu2x,g' Makefile
 %make_build
 
 

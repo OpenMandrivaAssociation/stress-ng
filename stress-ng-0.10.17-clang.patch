@@ -1,0 +1,15 @@
+diff -up stress-ng-0.10.17/stress-ng.h.omv~ stress-ng-0.10.17/stress-ng.h
+--- stress-ng-0.10.17/stress-ng.h.omv~	2020-01-28 22:27:40.661556831 +0100
++++ stress-ng-0.10.17/stress-ng.h	2020-01-28 22:27:58.905555946 +0100
+@@ -972,7 +972,11 @@ typedef struct {
+ 
+ /* gcc 7.0 and later support __attribute__((fallthrough)); */
+ #if defined(__GNUC__) && NEED_GNUC(7,0,0)
++#ifdef __clang__
++#define CASE_FALLTHROUGH [[clang::fallthrough]]
++#else
+ #define CASE_FALLTHROUGH __attribute__((fallthrough)) /* Fallthrough */
++#endif
+ #else
+ #define CASE_FALLTHROUGH /* Fallthrough */
+ #endif

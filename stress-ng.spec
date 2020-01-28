@@ -5,7 +5,7 @@ Summary:	Stress test a computer system in various ways
 
 License:	GPLv2+
 URL:		http://kernel.ubuntu.com/~cking/%{name}
-Source0:	http://kernel.ubuntu.com/~cking/tarballs/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://kernel.ubuntu.com/~cking/tarballs/%{name}/%{name}-%{version}.tar.xz
 
 BuildRequires:  gcc
 BuildRequires:	glibc-devel

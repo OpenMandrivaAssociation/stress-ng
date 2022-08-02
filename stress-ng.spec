@@ -7,7 +7,7 @@ License:	GPLv2+
 URL:		http://kernel.ubuntu.com/~cking/%{name}
 Source0:  https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V%{version}/%{name}-%{version}.tar.gz
 #Source0:	http://kernel.ubuntu.com/~cking/tarballs/%{name}/%{name}-%{version}.tar.xz
-Patch0:		stress-ng-0.10.17-clang.patch
+#Patch0:		stress-ng-0.10.17-clang.patch
 
 BuildRequires:  gcc
 BuildRequires:	glibc-devel
@@ -30,8 +30,8 @@ system kernel interfaces.
 %autosetup -p1
 
 %build
-#export CC=gcc
-#export CXX=g++
+export CC=gcc
+export CXX=g++
 export CFLAGS="%{optflags}"
 export LDFLAGS="%{__global_ldflags}"
 # Allow for [[clang::fallthrough]]

@@ -30,6 +30,8 @@ system kernel interfaces.
 %autosetup -p1
 
 %build
+export CC=gcc
+export CXX=g++
 export CFLAGS="%{optflags}"
 export LDFLAGS="%{__global_ldflags}"
 # Allow for [[clang::fallthrough]]

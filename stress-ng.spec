@@ -1,6 +1,6 @@
 Name:		stress-ng
 Version:	0.15.05
-Release:	1
+Release:	2
 Summary:	Stress test a computer system in various ways
 Group:    System/Kernel and hardware 
 License:	GPLv2+

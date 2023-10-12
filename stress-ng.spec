@@ -32,10 +32,10 @@ system kernel interfaces.
 %build
 #export CC=gcc
 #export CXX=g++
-export CFLAGS="%{optflags}"
-export LDFLAGS="%{__global_ldflags}"
+#export CFLAGS="%{optflags}"
+#export LDFLAGS="%{__global_ldflags}"
 # Allow for [[clang::fallthrough]]
-sed -i -e 's,gnu99,gnu2x,g' Makefile
+#sed -i -e 's,gnu99,gnu2x,g' Makefile
 %make_build
 
 

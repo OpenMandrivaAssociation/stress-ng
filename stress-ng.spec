@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 Name:		stress-ng
 Version:	0.17.00
 Release:	1

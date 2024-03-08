@@ -1,12 +1,12 @@
 %define _empty_manifest_terminate_build 0
 
 Name:		stress-ng
-Version:	0.17.05
+Version:	0.17.06
 Release:	1
 Summary:	Stress test a computer system in various ways
 Group:    System/Kernel and hardware 
 License:	GPLv2+
-URL:		http://kernel.ubuntu.com/~cking/%{name}
+URL:		https://kernel.ubuntu.com/~cking/%{name}
 Source0:  https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V%{version}/%{name}-%{version}.tar.gz
 #Source0:	http://kernel.ubuntu.com/~cking/tarballs/%{name}/%{name}-%{version}.tar.xz
 #Patch0:		stress-ng-0.10.17-clang.patch

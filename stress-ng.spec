@@ -1,7 +1,7 @@
 %define _empty_manifest_terminate_build 0
 
 Name:		stress-ng
-Version:	0.19.02
+Version:	0.19.05
 Release:	1
 Summary:	Stress test a computer system in various ways
 Group:    System/Kernel and hardware 

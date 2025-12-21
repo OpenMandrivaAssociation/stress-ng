@@ -11,6 +11,7 @@ Source0:  https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V%{version
 #Source0:	http://kernel.ubuntu.com/~cking/tarballs/%{name}/%{name}-%{version}.tar.xz
 #Patch0:		stress-ng-0.10.17-clang.patch
 
+BuildRequires:	make
 BuildRequires:  gcc
 BuildRequires:	glibc-devel
 BuildRequires:	kernel-headers
